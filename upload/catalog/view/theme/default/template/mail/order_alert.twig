@@ -1,33 +1,48 @@
 {{ text_received }}
+{% verbatim %}
 
+{% endverbatim %}
 {{ text_order_id }} {{ order_id }}
 {{ text_date_added }} {{ date_added }}
 {{ text_order_status }} {{ order_status }}
+{% verbatim %}
 
+{% endverbatim %}
 {{ text_product }}
+{% verbatim %}
 
+{% endverbatim %}
 {% for product in products %}
 {{ product.quantity }}x {{ product.name }} ({{ product.model }}) {{ product.total }}
-{% if product.option %}
+{% if option %}
 {% for option in product.option %}
 	- {{ option.name }} {{ option.value }}
 {% endfor %}
 {% endif %}
-{% endfor %}
+{% endfor %} 
 {% if vouchers %}
+{% verbatim %}
 
+{% endverbatim %}
 {% for voucher in vouchers %}
 1x {{ voucher.description }} {{ voucher.amount }}
-{% endfor %}
+{% endfor %} 
 {% endif %}
 {{ text_total }}
+{% verbatim %}
 
+{% endverbatim %}
 {% for total in totals %}
 {{ total.title }}: {{ total.value }}
-{% endfor %}
+{% endfor %} 
+{% verbatim %}
 
+{% endverbatim %}
 {% if comment %}
 {{ text_comment }}
+{% verbatim %}
 
+{% endverbatim %}
 {{ comment }}
 {% endif %}
+

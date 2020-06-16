@@ -1,19 +1,31 @@
 {{ text_welcome }}
+{% verbatim %}
 
+{% endverbatim %}
 {% if not approval %}
 {{ text_login }}
+{% verbatim %}
 
+{% endverbatim %}
 {{ login }}
+{% verbatim %}
 
+{% endverbatim %}
 {{ text_service }}
+{% verbatim %}
 
+{% endverbatim %}
 {{ text_thanks }}
 {{ store }}
 {% else %}
 {{ text_approval }}
+{% verbatim %}
 
+{% endverbatim %}
 {{ login }}
+{% verbatim %}
 
+{% endverbatim %}
 {{ text_thanks }}
 {{ store }}
 {% endif %}
